@@ -1,0 +1,30 @@
+<div class="wrapper">
+	<app-header></app-header>
+	<main class="main">
+		<div class="content">
+			<div class="content__table table">
+				<div class="table__wrapper">
+					<div class="table__month">{{months[4]}}</div>
+					<table class="table__table-month">
+						<thead>
+							<tr>
+								<th></th>
+								<th *ngFor="let date of monthDate">{{date}}</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr *ngFor="let category of expensesCategories">
+								{{category}}
+								<td *ngFor="let date of monthDate">
+									<input />
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+			</div>
+			<div class="content__diagrams diagrams"></div>
+			<div class="content__chart chart"></div>
+		</div>
+	</main>
+</div>

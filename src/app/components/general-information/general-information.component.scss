@@ -1,0 +1,78 @@
+.wrapper {
+	width: 100vw;
+	height: 100vh;
+	display: grid;
+	grid-template-columns: 95px 1fr;
+}
+
+main {}
+
+.content {
+	width: 100%;
+	height: 100%;
+	display: grid;
+	grid-template-areas:
+		"table table table table table"
+		"table table table table table"
+		//"table table table table table"
+		"diagrams diagrams diagrams chart chart"
+		"diagrams diagrams diagrams chart chart";
+
+	&__table {
+		grid-area: table;
+	}
+
+	&__diagrams {
+		grid-area: diagrams;
+	}
+
+	&__chart {
+		grid-area: chart;
+	}
+}
+
+.table {
+
+	&__wrapper {
+		display: flex;
+		flex-direction: column;
+		color: #ffffff;
+		margin: 10px;
+	}
+
+	&__month {
+		font-size: 50px;
+		margin: 10px 10px 10px 50px;
+	}
+
+	&__table-month {
+		border-collapse: collapse;
+	}
+}
+
+table thead th {
+	font-size: 16px;
+}
+
+table tr {
+	text-align: center;
+	line-height: 2vh;
+	vertical-align: baseline;
+}
+
+table tr:nth-child(even) {
+	background: #3b2f0d;
+}
+
+table td {
+	border: #dddddd70 1px solid;
+}
+
+table td input {
+	background: none;
+	height: 100%;
+	width: 100%;
+	padding: 3px 3px 10px 3px;
+	color: #ffffff;
+	vertical-align: baseline;
+}
